@@ -1,0 +1,1 @@
+# template_minimal_python_playwright
