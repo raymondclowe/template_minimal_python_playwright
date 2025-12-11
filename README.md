@@ -35,15 +35,28 @@ A minimal dev container setup for Python Playwright automation with Chrome brows
    - Type "Dev Containers: Reopen in Container"
    - Wait for the container to build (first time takes a few minutes)
 
-4. **Run the examples**
+4. **Verify the setup**
+   ```bash
+   python examples/00_verify_setup.py
+   ```
+
+5. **Run the examples**
    ```bash
    python examples/01_hello_world.py
    python examples/02_form_filling.py
    python examples/03_reading_data.py
    python examples/04_clicking_buttons.py
+   python examples/05_complete_example.py
    ```
 
 ## Examples Included
+
+### 00_verify_setup.py
+Setup verification script demonstrating:
+- Checking Playwright installation
+- Verifying browser availability
+- Testing system dependencies
+- Providing troubleshooting guidance
 
 ### 01_hello_world.py
 Basic Playwright usage demonstrating:
@@ -72,19 +85,29 @@ Dynamic interaction demonstrating:
 - Handling page transitions
 - Going back/forward in browser history
 
+### 05_complete_example.py
+Complete workflow demonstrating:
+- Combining all concepts
+- Wikipedia scraping example
+- Error handling
+- Multiple navigation steps
+
 ## Project Structure
 
 ```
 .
 ├── .devcontainer/
-│   ├── devcontainer.json    # Dev container configuration
-│   └── Dockerfile            # Container image definition
+│   ├── devcontainer.json       # Dev container configuration
+│   └── Dockerfile               # Container image definition
 ├── examples/
-│   ├── 01_hello_world.py
-│   ├── 02_form_filling.py
-│   ├── 03_reading_data.py
-│   └── 04_clicking_buttons.py
-├── requirements.txt          # Python dependencies
+│   ├── 00_verify_setup.py       # Setup verification
+│   ├── 01_hello_world.py        # Basic example
+│   ├── 02_form_filling.py       # Form interaction
+│   ├── 03_reading_data.py       # Data extraction
+│   ├── 04_clicking_buttons.py   # Dynamic interaction
+│   └── 05_complete_example.py   # Complete workflow
+├── requirements.txt             # Python dependencies
+├── setup.sh                     # Setup helper script
 ├── .gitignore
 └── README.md
 ```

@@ -82,10 +82,10 @@ def scrape_wikipedia_python():
             print(f"\n🌐 Found {len(external_links)} external links")
             
             # Example: Navigate to a section
-            history_link = page.locator("a:has-text('History')").first
+            history_link = page.locator("a:has-text('History')")
             if history_link.count() > 0:
                 print("\n📖 Navigating to History section...")
-                history_link.click()
+                history_link.first.click()
                 page.wait_for_load_state("networkidle")
                 
                 # Take another screenshot
